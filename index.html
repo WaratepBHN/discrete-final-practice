@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#142c34">
+  <meta name="description" content="แบบฝึก Discrete Mathematics 20 ข้อ พร้อมเฉลยและเหตุผลทุกตัวเลือก: Number Theory, Relations และ Graphs">
+  <title>Discrete / 20 — ฝึกก่อนสอบ</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Discrete 20 หน้าหลัก"><img src="./icon.svg" alt="" width="37" height="37"><span>DISCRETE <b>/ 20</b><small>แบบฝึกก่อนสอบ · 06066000</small></span></a>
+    <span class="edition">คิดให้ชัด แล้วค่อยเลือก <span aria-hidden="true">↗</span></span>
+  </header>
+  <div id="loading" class="loading" role="status">กำลังเปิดชุดโจทย์…</div>
+  <div id="app" class="layout" hidden>
+    <aside class="sidebar" aria-label="ความคืบหน้าและรายการข้อ">
+      <div class="sidebar-head"><span class="eyebrow">YOUR PRACTICE</span><h1>ซ้อมให้พร้อม<br><span>ก่อนเข้าห้องสอบ</span></h1><p>20 ข้อ · เลือกคำตอบที่ถูกเพียงข้อเดียว</p></div>
+      <div class="progress-meta"><span id="progress-text"></span><strong id="score-mini"></strong></div>
+      <progress id="progress" max="20" value="0" aria-label="จำนวนข้อที่ตรวจแล้ว"></progress>
+      <nav id="question-grid" class="question-grid" aria-label="เลือกข้อ"></nav>
+      <div class="key"><span><i class="dot done"></i>ถูก</span><span><i class="dot wrong"></i>ผิด</span><span><i class="dot pending"></i>ยังไม่ตรวจ</span></div>
+      <button class="text-button summary-link" id="summary-button">ดูคะแนนและหัวข้อที่ควรทวน <span aria-hidden="true">↗</span></button>
+      <details class="rules"><summary>ขอบเขตและวิธีใช้</summary><p>โจทย์แต่งใหม่ระดับต่อยอดจากการบ้าน: Number Theory 4 ข้อ, Relations 6 ข้อ, Graphs 10 ข้อ ข้อละ 1 คะแนน เป้าฝึก 14/20 (70%)</p><p>ตรวจแล้วจะล็อกคำตอบแรกไว้เพื่อให้คะแนนสะท้อนรอบนี้ กลับอ่านเฉลยได้ทุกข้อ ตัวเลือกสลับตำแหน่งเมื่อเริ่มรอบใหม่</p><p>ใช้ convention ของวิชาตามที่ระบุในโจทย์ โดยเฉพาะ simple path, loop และ Euler path</p></details>
+      <p class="save-note" id="save-note">บันทึกอัตโนมัติในเบราว์เซอร์นี้</p>
+      <button class="text-button reset-button" id="reset-button">เริ่มรอบใหม่</button>
+    </aside>
+    <main id="main" class="main" tabindex="-1">
+      <article id="question" class="question-card" tabindex="-1"></article>
+      <section id="summary" class="summary-card" tabindex="-1" hidden></section>
+      <footer class="footnote">ชุดฝึกอิสระสำหรับทบทวนตามหัวข้อรายวิชา · ไม่ใช่ข้อสอบจริงหรือคำทำนายข้อสอบ</footer>
+    </main>
+  </div>
+  <dialog id="reset-dialog"><form method="dialog"><span class="eyebrow">NEW ATTEMPT</span><h2>เริ่มทำใหม่ทั้ง 20 ข้อ?</h2><p>คะแนนและคำตอบรอบนี้จะถูกแทนที่ ตัวเลือกจะสลับตำแหน่งใหม่</p><div class="dialog-actions"><button value="cancel" class="secondary">ทำรอบเดิมต่อ</button><button value="reset" class="primary">เริ่มรอบใหม่</button></div></form></dialog>
+  <noscript>กรุณาเปิด JavaScript เพื่อทำแบบฝึกและอ่านเฉลย</noscript>
+</body>
+</html>
